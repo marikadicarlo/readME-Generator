@@ -1,14 +1,22 @@
 {
-  "name": "static-site",
+  "name": "read-me-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create a custom README file using this Read-Me-Generator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marikadicarlo/readME-Generator.git"
+  },
+  "keywords": [
+    "read",
+    "me"
+  ],
+  "author": "Marika Di Carlo",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
+    "inquirer": "^6.5.2"
   }
 }
