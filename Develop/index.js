@@ -1,13 +1,15 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require("fs");
-const util = require("util");
-const generateMarkdown = require('./utils/generateMarkdown');
-const writeFile = util.promisify(fs.writeFile);
+const { userInfo } = require('os');
+// const util = require("util");
+const generatePage = require('./utils/generateMarkdown.js');
+// const writeFile = util.promisify(fs.writeFile);
 
 
 // TODO: Create an array of questions for user input
-const questions = inquirer.prompt ([
+const promptUser = () => {
+  return inquirer.prompt([
       {
         type: "input",
         message: "What is the title of your project?",
@@ -73,30 +75,33 @@ const questions = inquirer.prompt ([
           },
       },
 ])
+};
     
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (err) => {
+const writeFile = data => {
+  fs.writeFile('README.md', data, err => {
     if (err) {
-      return console.log(err);
+      console.log(err);
+      return;
+    } else {
+      console.log("Your README has been successfully created!")
     }
-
-    console.log("Success! Your README.md file has been generated");
-  });
-}
-
-
-// TODO: Create a function to initialize app
-function init() {
-  try {
-    questions().catch((error) => {
-      console.log("Invalid Input", error);
-    });
-  } catch (error) {
-    console.log("Invalid Input", error);
-  }
+  })
 };
+
+promptUser()
+.then (answers => {
+  return generatePage(answers);
+})
+.then (data => {
+  return writeFile(data);
+})
+.catch(err => {
+  console.log(err)
+})
+// TODO: Create a function to initialize app
+// function init()
 
 // Function call to initialize app
 // init();
