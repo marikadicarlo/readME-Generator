@@ -45,7 +45,7 @@ function generateMarkdown(answers) {
   ${answers.Tests}
 
   ## Questions
-  Contact me with any questions at ${answers.Email} or [visit my GitHubpage](${answers.Github})
+  Contact me with any questions at ${answers.Email} or [visit my GitHubpage](https://github.com/${answers.Github})
 `;
 }
 
