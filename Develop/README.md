@@ -1,9 +1,9 @@
 
-  # runbuddy
-  ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+  # ReadMe Generator 3000
+  ![GitHub license](https://img.shields.io/badge/license-Unlicense-blue.svg)
 
   ## Description
-  it is cool
+  You can quickly and easily generate a README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
 
   ## Table of Contents
   * [Installation](#installation)
@@ -20,7 +20,7 @@
   What is this project usage for?
 
   ## License
-  MIT
+  Unlicense
 
   ## Contributions
   undefined
