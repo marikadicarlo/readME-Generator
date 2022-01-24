@@ -34,8 +34,10 @@ function generateMarkdown(answers) {
   ${answers.Usage}
 
   ## License
-  ${answers.License}
-
+  ![badge](https://img.shieldsio/badge/license-${answers.License}-brightgreen)
+  <br />
+  This application is covered by the ${answers.License} license.
+  
   ## Contributions
   ${answers.Contributions}
 
