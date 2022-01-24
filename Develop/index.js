@@ -2,9 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require("fs");
 const { userInfo } = require('os');
-// const util = require("util");
 const generatePage = require('./utils/generateMarkdown.js');
-// const writeFile = util.promisify(fs.writeFile);
 
 
 // TODO: Create an array of questions for user input
@@ -94,9 +92,12 @@ promptUser()
 .then (answers => {
   return generatePage(answers);
 })
-.then (data => {
-  return writeFile(data);
+.then(pageREADME => {
+  return writeFile(pageREADME);
 })
+// .then (data => {
+//   return writeFile(data);
+// })
 .catch(err => {
   console.log(err)
 })
