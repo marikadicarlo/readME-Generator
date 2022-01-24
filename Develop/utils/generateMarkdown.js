@@ -39,10 +39,10 @@ function generateMarkdown(answers) {
   This application is covered by the ${answers.License} license.
   
   ## Contributions
-  ${answers.Contributions}
+  ${answers.Contribution}
 
-  ## Tests
-  ${answers.Tests}
+  ## Test
+  ${answers.Test}
 
   ## Questions
   Contact me with any questions at ${answers.Email} or [visit my GitHubpage](https://github.com/${answers.Github})
