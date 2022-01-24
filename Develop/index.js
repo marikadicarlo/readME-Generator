@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require("fs");
 const generateMarkdown = require('./utils/generateMarkdown.js');
+const { userInfo } = require('os');
 
 
 
@@ -21,41 +22,41 @@ const questions = inquirer.prompt ([
         typ: "input",
         message: "Installation Instructions",
         name: "Installation",
-        default: "No installation information available.",
+        default: "If applicable, describe the steps required to install your project for the Installation section.",
       },
       {
         type: "input",
         message: "Usage Information",
         name: "Usage",
-        default: "No usage information is available.",
+        default: "Provide instructions and examples of your project in use for the Usage section.",
       },
       {
         type: "input",
         message: "Contribution Guidelines",
         name: "Contribution",
-        default: "No contribution information is available.",
+        default: "If applicable, provide guidelines on how other developers can contribute to your project.",
       },
       {
         type: "input",
         message: "Test Instructions",
         name: "Test",
-        default: "No testing information is available.",
+        default: "If applicable, provide any tests written for your application and provide examples on how to run them.",
       },
       {
         type: "list",
         name: "License",
-        message: "Choose a License..",
-        choices: ["MIT", "ISC", "Unlicense"],
+        message: "Choose a License for your project..",
+        choices: ["MIT", "ISC", "Unlicense", "Mozilla Public License"],
       },
       {
         type: "input",
         message: "What is your GitHub username?",
         name: "Github",
-        filter: function (answers) {
-            if (answers) {
-                return 'https://github.com/${answers}';
+        validate: function (answers) {
+            if (answers.length < 1) {
+                return console.log("A valid GitHub username is required.");
             } else {
-                return "Please enter valid GitHub username.";
+                return true;
             }
         },
       },
@@ -63,11 +64,11 @@ const questions = inquirer.prompt ([
           type: "input",
           message: "What is your email address?",
           name: "Email",
-          filter: function (answers) {
-              if (answers) {
-                  return '${answers}';
+          validate: function (answers) {
+              if (answers.length < 1) {
+                  return console.log("A valid email address is required.");
               } else {
-                  return "No valid email address was entered.";
+                  return true;
               }
           },
       },
@@ -89,7 +90,15 @@ function writeToFile(fileName, data) {
 
 
 // TODO: Create a function to initialize app
-// function init() {}
+function init() {
+  try {
+    questions().catch((error) => {
+      console.log("Invalid Input", error);
+    });
+  } catch (error) {
+    console.log("Invalid Input", error);
+  }
+};
 
 // Function call to initialize app
 // init();
