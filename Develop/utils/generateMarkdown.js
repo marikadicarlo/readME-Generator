@@ -24,7 +24,7 @@ function generateMarkdown(answers) {
   * [Usage](#usage)
   * [License](#license)
   * [Contribution](#contribution)
-  * [Tests](#test)
+  * [Tests](#tests)
   * [Questions](#questions)
 
   ## Installation
@@ -34,18 +34,18 @@ function generateMarkdown(answers) {
   ${answers.Usage}
 
   ## License
-  ![badge](https://img.shields/io/badge/license-${answers.License}-brightgreen)
+  ![badge](https://img.shields.io/badge/license-${answers.License}-brightgreen)
   <br />
   This application is covered by the ${answers.License} license.
   
-  ## Contributing
+  ## Contribution
   ${answers.Contribution}
 
   ## Tests
   ${answers.Test}
 
   ## Questions
-  Contact me with any questions at ${answers.Email} or [visit my GitHubpage](https://github.com/${answers.Github})
+  Contact me with any questions at ${answers.Email} or [visit my GitHub page](https://github.com/${answers.Github})
 `;
 }
 
