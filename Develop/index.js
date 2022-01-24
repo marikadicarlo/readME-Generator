@@ -2,7 +2,10 @@
 const inquirer = require('inquirer');
 const fs = require("fs");
 const { userInfo } = require('os');
-const generatePage = require('./utils/generateMarkdown.js');
+const generatePage = require('./utils/generateMarkdown');
+const util = require("util");
+const generateMarkdown = require('./utils/generateMarkdown');
+const writeFileAsync = util.promisify(fs.writeFile);
 
 
 // TODO: Create an array of questions for user input
@@ -77,8 +80,8 @@ const promptUser = () => {
     
 
 // TODO: Create a function to write README file
-const writeFile = data => {
-  fs.writeFile('README.md', data, err => {
+const writeFile = answers => {
+  fs.writeFile('README.md', answers, err => {
     if (err) {
       console.log(err);
       return;
@@ -90,7 +93,7 @@ const writeFile = data => {
 
 promptUser()
 .then (answers => {
-  return generatePage(answers);
+  return generateMarkdown(answers);
 })
 .then(pageREADME => {
   return writeFile(pageREADME);
