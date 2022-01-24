@@ -30,6 +30,12 @@ THEN I am taken to the corresponding section of the README
 ```
 
 ## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contribution](#contribution)
+  * [Tests](#tests)
+  * [Questions](#questions)
 
 ## Installation
 
@@ -38,3 +44,4 @@ THEN I am taken to the corresponding section of the README
 ## Contributing
 
 ## Questions
+Contact me with any questions at <mdicarlo19@yahoo.com> or [visit my GutHub page](https://github.com/marikadicarlo)
