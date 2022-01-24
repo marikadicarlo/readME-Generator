@@ -1,5 +1,5 @@
 
-  # ReadMe Generator 3000
+  # README Generator 3000
   ![GitHub license](https://img.shields.io/badge/license-Unlicense-blue.svg)
 
   ## Description
@@ -14,10 +14,10 @@
   * [Questions](#questions)
 
   ## Installation
-  If applicable, describe the installation process.
+  npm init, npm install inquirer
 
   ## Usage
-  What is this project usage for?
+  Run the following command at the root of your project and answer the prompted questions: node index.js
 
   ## License
   Unlicense
