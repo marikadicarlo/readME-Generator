@@ -1,16 +1,16 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require("fs");
-const generateMarkdown = require('./utils/generateMarkdown.js');
-const { userInfo } = require('os');
-
+const util = require("util");
+const generateMarkdown = require('./utils/generateMarkdown');
+const writeFile = util.promisify(fs.writeFile);
 
 
 // TODO: Create an array of questions for user input
 const questions = inquirer.prompt ([
       {
         type: "input",
-        message: "What is the title of your page?",
+        message: "What is the title of your project?",
         name: "Title",
       },
       {
@@ -22,31 +22,31 @@ const questions = inquirer.prompt ([
         typ: "input",
         message: "Installation Instructions",
         name: "Installation",
-        default: "If applicable, describe the steps required to install your project for the Installation section.",
+        default: "If applicable, describe the installation process.",
       },
       {
         type: "input",
         message: "Usage Information",
         name: "Usage",
-        default: "Provide instructions and examples of your project in use for the Usage section.",
+        default: "What is this project usage for?",
       },
       {
         type: "input",
         message: "Contribution Guidelines",
         name: "Contribution",
-        default: "If applicable, provide guidelines on how other developers can contribute to your project.",
+        default: "Who are the contributors of this project?",
       },
       {
         type: "input",
         message: "Test Instructions",
         name: "Test",
-        default: "If applicable, provide any tests written for your application and provide examples on how to run them.",
+        default: "Is there a test included?",
       },
       {
         type: "list",
         name: "License",
         message: "Choose a License for your project..",
-        choices: ["MIT", "ISC", "Unlicense", "Mozilla Public License"],
+        choices: ["MIT", "ISC", "Unlicense", "Mozilla", "Apache"],
       },
       {
         type: "input",
@@ -85,8 +85,6 @@ function writeToFile(fileName, data) {
     console.log("Success! Your README.md file has been generated");
   });
 }
-
-// const writeFileAsync = util.promisify(writeToFile);
 
 
 // TODO: Create a function to initialize app
