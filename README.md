@@ -1,6 +1,6 @@
 # README-Generator 3000
 
-[Video link of README]()
+[Click here for Video]()
 
 ## Description
 You can quickly and easily generate a README by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
@@ -40,8 +40,9 @@ THEN I am taken to the corresponding section of the README
   * [Questions](#questions)
 
 ## Installation
-The user should clone the repository from GitHUb and download Node. This application also requires a file system and inquirer module.
-`npm init`
+The user should clone the repository from GitHUb and download Node. This application also requires a file system and inquirer module. <br />
+`npm init` 
+<br />
 `npm install inquirer`
 
 ## Usage
@@ -52,6 +53,9 @@ Use inquirer from your command line to answer questions about your project.
 
 ## Contribution
 Contributors should read the installation section.
+
+## Tests
+`node index.js`
 
 ## Questions
 Contact me with any questions at <mdicarlo19@yahoo.com> or [visit my GutHub page](https://github.com/marikadicarlo)

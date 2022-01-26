@@ -91,6 +91,7 @@ const writeFile = answers => {
   })
 };
 
+// TODO: Create a function to initialize app
 promptUser()
 .then (answers => {
   return generateMarkdown(answers);
@@ -98,14 +99,9 @@ promptUser()
 .then(pageREADME => {
   return writeFile(pageREADME);
 })
-// .then (data => {
-//   return writeFile(data);
-// })
 .catch(err => {
   console.log(err)
 })
-// TODO: Create a function to initialize app
-// function init()
 
 // Function call to initialize app
 // init();
