@@ -17,18 +17,18 @@
   `npm init`, `npm install inquirer`
 
   ## Usage
-  Run the following command at the root of your project and answer the prompted questions: `node index.js`
+  Run the following command at the root of your project and answer the prompted questions: <br /> `node index.js`
 
   ## License
-  ![badge](https://img.shieldsio/badge/license-ISC-brightgreen)
+  ![badge](https://img.shields.io/badge/license-ISC-brightgreen)
   <br />
   This application is covered by the ISC license.
   
   ## Contributions
-  undefined
+  Contributors should read the installation section.
 
   ## Tests
-  undefined
+  'node index.js'
 
   ## Questions
   Contact me with any questions at mdicarlo19@yahoo.com or [visit my GitHubpage](https://github.com/marikadicarlo)
