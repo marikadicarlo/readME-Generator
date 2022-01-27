@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require("fs");
 const { userInfo } = require('os');
-const generatePage = require('./utils/generateMarkdown');
+// const generatePage = require('./utils/generateMarkdown');
 const util = require("util");
 const generateMarkdown = require('./utils/generateMarkdown');
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -83,13 +83,11 @@ const promptUser = () => {
 const writeFile = answers => {
   fs.writeFile('README.md', answers, err => {
     if (err) {
-      console.log(err);
-      return;
-    } else {
+      return console.log(err);
+    } 
       console.log("Your README has been successfully created!")
-    }
-  })
-};
+    });
+}
 
 // TODO: Create a function to initialize app
 promptUser()
