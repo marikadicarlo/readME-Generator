@@ -10,7 +10,7 @@
   * [Usage](#usage)
   * [License](#license)
   * [Contribution](#contribution)
-  * [Tests](#test)
+  * [Tests](#tests)
   * [Questions](#questions)
 
   ## Installation
@@ -24,11 +24,11 @@
   <br />
   This application is covered by the ISC license.
   
-  ## Contributions
+  ## Contribution
   Contributors should read the installation section.
 
   ## Tests
-  'node index.js'
+  `node index.js`
 
   ## Questions
   Contact me with any questions at mdicarlo19@yahoo.com or [visit my GitHubpage](https://github.com/marikadicarlo)
