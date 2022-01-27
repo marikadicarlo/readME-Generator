@@ -1,6 +1,6 @@
 # README-Generator 3000
 
-[Click here for Video]()
+[Click here for Video](https://drive.google.com/file/d/1Bm48ECL_KMr48e2ySkJLgiga9eH2FIyx/view?usp=sharing)
 
 ## Description
 You can quickly and easily generate a README by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
