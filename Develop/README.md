@@ -3,7 +3,7 @@
   ![GitHub license](https://img.shields.io/badge/license-Unlicense-blue.svg)
 
   ## Description
-  You can quickly and easily generate a README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
+  You can quickly and easily generate a README file by using a command-line application to generate one. This allows the project creator to devore more time working on the project.
 
   ## Table of Contents
   * [Installation](#installation)
@@ -14,7 +14,7 @@
   * [Questions](#questions)
 
   ## Installation
-  `npm init` , `npm install inquirer`
+  `npm init`, `npm install inquirer`
 
   ## Usage
   Run the following command at the root of your project and answer the prompted questions: `node index.js`
